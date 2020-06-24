@@ -1,0 +1,7 @@
+﻿<Properties>
+  <WatchEntry0 value="Browser(&quot;Home | Salesforce&quot;).Page(&quot;Contracts | Salesforce&quot;).WebElement(&quot;New&quot;).exist" />
+  <WatchEntry1 value="AccountName" />
+  <WatchEntry2 value="Browser(&quot;Home | Salesforce&quot;).Page(&quot;Contracts | Salesforce&quot;).Link(&quot;htmltag:=A&quot;,&quot;innertext:=&quot;&amp;AccountName&amp;&quot;&quot;,&quot;index:=2&quot;).Click" />
+  <WatchEntry3 value="Browser(&quot;Home | Salesforce&quot;).Page(&quot;Recently Viewed | Accounts&quot;).Link(&quot;name:=&quot;&amp;Account&amp;&quot;&quot;).Exist" />
+  <WatchEntry4 value="Contact" />
+</Properties>

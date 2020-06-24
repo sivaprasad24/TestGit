@@ -1,0 +1,11 @@
+﻿<Properties>
+  <WatchEntry0 value="Browser(&quot;Home | Salesforce&quot;).Page(&quot;New Case | Salesforce&quot;).Link(&quot;name:=joel deal.*&quot;,&quot;index:=1&quot;).Click" />
+  <WatchEntry1 value="CaseContact" />
+  <WatchEntry2 value="Browser(&quot;Home | Salesforce&quot;).Page(&quot;Cases | Salesforce&quot;).WebButton(&quot;New&quot;).Exist(25)" />
+  <WatchEntry3 value="Browser(&quot;Home | Salesforce&quot;).Page(&quot;abc | Salesforce&quot;).WebElement(&quot;Cases&quot;).highlight" />
+  <WatchEntry4 value="acntname" />
+  <WatchEntry5 value="rownum" />
+  <WatchEntry6 value="AccountName" />
+  <WatchEntry7 value="CaseContact" />
+  <WatchEntry8 value="rcnt" />
+</Properties>

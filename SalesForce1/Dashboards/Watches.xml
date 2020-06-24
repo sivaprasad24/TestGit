@@ -1,0 +1,11 @@
+﻿<Properties>
+  <WatchEntry0 value="GroupName" />
+  <WatchEntry1 value="Browser(&quot;Home | Salesforce&quot;).Page(&quot;abc | Salesforce&quot;).WebElement(&quot;innertext:=&quot;&amp;GroupName&amp;&quot;&quot;,&quot;visible:=True&quot;,&quot;index:=0&quot;).Exist" />
+  <WatchEntry2 value="DashboardFolder" />
+  <WatchEntry3 value="Browser(&quot;Home | Salesforce&quot;).Page(&quot;Dashboards | Salesforce&quot;).WebEdit(&quot;Search folders...&quot;).exist" />
+  <WatchEntry4 value="Browser(&quot;Home | Salesforce&quot;).Page(&quot;Dashboards | Salesforce&quot;).WebEdit(&quot;Search folders...&quot;).Set DashboardFolder" />
+  <WatchEntry5 value="Browser(&quot;Home | Salesforce&quot;).Page(&quot;Dashboards | Salesforce&quot;).WebEdit(&quot;Search folders&quot;).exist" />
+  <WatchEntry6 value="Browser(&quot;Home | Salesforce&quot;).Page(&quot;abc | Salesforce&quot;).WebElement(&quot;innertext:=&quot;&amp;DashboardName&amp;&quot;&quot;).exist" />
+  <WatchEntry7 value="Browser(&quot;Home | Salesforce&quot;).Page(&quot;Dashboards | Salesforce&quot;).WebElement(&quot;innertext:=&quot;&amp;DashboardName&amp;&quot;&quot;).Exist(60)" />
+  <WatchEntry8 value="Browser(&quot;Home | Salesforce&quot;).Page(&quot;Dashboards | Salesforce&quot;).WebElement(&quot;innertext:=&quot;&amp;DashboardName&amp;&quot;&quot;,&quot;index:=3&quot;).exist" />
+</Properties>

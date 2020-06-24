@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<Results version="1.0">
+<ReportNode type="testrun">
+<ReportNode type="Action">
+<ReportNode type="Context">
+<Data>
+    <Name>Home | Salesforce</Name>
+    <Description>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;span style="text-align : left; font-size : 12px; "&gt;Local Browser&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</Description>
+    <StartTime>2020-06-11 11:30:31</StartTime>
+    <Result>Failed</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Repository.tsr</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Home | Salesforce]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[<table><tr><td><span style="text-align : left; font-size : 12px; ">Local Browser</span></td></tr></table>]]></OperationData>
+      </TestObject>
+      <IconKey>91c58750403546f0b21f11c1ea5b14cf</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<ReportNode type="Context">
+<ReportNode type="Step">
+<Data>
+    <Name>SelectContact</Name>
+    <ErrorText>This is a FACILITY_ITF error that is specific to the interface that returned this error. See the documentation of the interface that returned this error for information about this HRESULT.</ErrorText>
+    <Description>This&amp;nbsp;is&amp;nbsp;a&amp;nbsp;FACILITY_ITF&amp;nbsp;error&amp;nbsp;that&amp;nbsp;is&amp;nbsp;specific&amp;nbsp;to&amp;nbsp;the&amp;nbsp;interface&amp;nbsp;that&amp;nbsp;returned&amp;nbsp;this&amp;nbsp;error.&amp;nbsp;See&amp;nbsp;the&amp;nbsp;documentation&amp;nbsp;of&amp;nbsp;the&amp;nbsp;interface&amp;nbsp;that&amp;nbsp;returned&amp;nbsp;this&amp;nbsp;error&amp;nbsp;for&amp;nbsp;information&amp;nbsp;about&amp;nbsp;this&amp;nbsp;HRESULT.&lt;br/&gt;&lt;br/&gt;Object's physical description:&lt;br&gt;role = listbox&lt;br&gt;miccommentproperty = &lt;br&gt;Mercury Class = WebList&lt;br&gt;Index = 2&lt;br&gt;Html Tag = DIV&lt;br&gt;_xpath = //DIV[3]/DIV[@role="listitem"][1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[@role="listbox"][1]&lt;br&gt;|Visible Items = 6&lt;br&gt;Visible = -1&lt;br&gt;Name = select&lt;br&gt;Items Count = 7&lt;br&gt;Html Id = &lt;br&gt;first item = Search Contacts&lt;br&gt;DHTML Class = undefined lookup__menu uiAbstractList uiAutocompleteList uiInput uiAutocomplete uiInput--default uiInput--lookup&lt;br&gt;acc_name = &lt;br&gt;</Description>
+    <StartTime>2020-06-11 11:31:23</StartTime>
+    <Result>Failed</Result>
+    <Extension>
+      <StackTrace>
+        <StackFrame>
+          <ModuleName><![CDATA[Cases]]></ModuleName>
+          <FileName><![CDATA[Cases]]></FileName>
+          <Language><![CDATA[VBScript - script block]]></Language>
+          <FunctionName><![CDATA[VBScript global code]]></FunctionName>
+          <Scripts><![CDATA[Browser("Home | Salesforce").Page("New Case | Salesforce").WebList("SelectContact").Select "joel deal"]]></Scripts>
+          <LineNo><![CDATA[203]]></LineNo>
+        </StackFrame>
+      </StackTrace>
+      <TestObject>
+        <Repository>Repository.tsr</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Home | Salesforce]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[New Case | Salesforce]]></Name>
+          </Object>
+          <Object>
+            <Type>WebList</Type>
+            <Name><![CDATA[SelectContact]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[This&nbsp;is&nbsp;a&nbsp;FACILITY_ITF&nbsp;error&nbsp;that&nbsp;is&nbsp;specific&nbsp;to&nbsp;the&nbsp;interface&nbsp;that&nbsp;returned&nbsp;this&nbsp;error.&nbsp;See&nbsp;the&nbsp;documentation&nbsp;of&nbsp;the&nbsp;interface&nbsp;that&nbsp;returned&nbsp;this&nbsp;error&nbsp;for&nbsp;information&nbsp;about&nbsp;this&nbsp;HRESULT.]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[listbox]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[name]]></Name>
+            <Value><![CDATA[select]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[DIV]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>323b9a2c9b71495f97219527c41db0c1</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+      <NodeType>Run Error</NodeType>
+    </Extension>
+    <Snapshot reference="Resources\Snapshots\756e96ec-2184-4458-970f-d16c4c114750.jpeg" highlight="0,0,1920,1048" />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>Stop Run</Name>
+    <Description>Run stopped by user.</Description>
+    <StartTime>2020-06-11 11:31:30</StartTime>
+    <Result>Information</Result>
+    <Extension>
+      <IconKey>6ad5300c29324bb59980631a34eb5d5f</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<Data>
+    <Name>Home | Salesforce</Name>
+    <Description>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;span style="text-align : left; font-size : 12px; "&gt;Local Browser&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</Description>
+    <StartTime>2020-06-11 11:31:23</StartTime>
+    <Duration>7</Duration>
+    <Result>Failed</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Repository.tsr</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Home | Salesforce]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[<table><tr><td><span style="text-align : left; font-size : 12px; ">Local Browser</span></td></tr></table>]]></OperationData>
+      </TestObject>
+      <IconKey>91c58750403546f0b21f11c1ea5b14cf</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<Data>
+    <Name>Cases</Name>
+    <Description />
+    <StartTime>2020-06-11 11:29:59</StartTime>
+    <Duration>91</Duration>
+    <Result>Failed</Result>
+    <InputParameters />
+    <Extension>
+      <IconKey>eea63eade8d8407989c921689c72dcb6</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<Data>
+    <Name>Cases</Name>
+    <ToolName>Micro Focus Unified Functional Testing</ToolName>
+    <ToolVersion>0</ToolVersion>
+    <ToolVersionStringLiteral>15.0.1</ToolVersionStringLiteral>
+    <Description />
+    <StartTime>2020-06-11 11:29:56</StartTime>
+    <Duration>94</Duration>
+    <Result>Failed</Result>
+    <InputParameters />
+    <Extension>
+      <IconKey>78884c8f0f8c43a48325718cf162411c</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <Environment>
+      <Timezone>+05:30:00</Timezone>
+      <Locale>English (India)</Locale>
+      <User>INFOTECH\1001378</User>
+      <CpuInfo>Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz</CpuInfo>
+      <NumberOfCores>4</NumberOfCores>
+      <TotalMemory>8064</TotalMemory>
+      <HostName>infotech.com\HYDADMSLAP03</HostName>
+      <OSInfo>Windows 7 Service Pack 1 (x64)</OSInfo>
+    </Environment>
+    <TestedApplications />
+    <Links>
+      <Link type="DataTable" reference="Default.xlsx" displayname="Default Data Table" />
+    </Links>
+  </Data>
+</ReportNode>
+<GeneralInfo>
+    <ResultName>Res20</ResultName>
+    <RunStartTime>2020-06-11 11:29:56</RunStartTime>
+    <Timezone>+05:30:00</Timezone>
+    <OrchestrationToolName>Micro Focus Unified Functional Testing</OrchestrationToolName>
+    <OrchestrationToolVersion>0</OrchestrationToolVersion>
+    <OrchestrationToolVersionStringLiteral>15.0.1</OrchestrationToolVersionStringLiteral>
+  </GeneralInfo>
+</Results>

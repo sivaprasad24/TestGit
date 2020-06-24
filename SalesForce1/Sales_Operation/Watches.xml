@@ -1,0 +1,7 @@
+﻿<Properties>
+  <WatchEntry0 value="Browser(&quot;Home | Salesforce&quot;).Page(&quot;Chatter Home | Salesforce&quot;).WebEdit(&quot;Write a comment&quot;).Highlight" />
+  <WatchEntry1 value="Browser(&quot;Home | Salesforce&quot;).Page(&quot;Recently Viewed | Contacts&quot;).Link(&quot;name:=&quot;&amp;Contact&amp;&quot;&quot;,&quot;index:=2&quot;).Exist(15)" />
+  <WatchEntry2 value="Contact" />
+  <WatchEntry3 value="Leads" />
+  <WatchEntry4 value="Browser(&quot;Home | Salesforce&quot;).Page(&quot;Recently Viewed | Leads&quot;).Link(&quot;name:=&quot;&amp;Leads&amp;&quot;&quot;,&quot;index:=0&quot;).Exist(15)" />
+</Properties>

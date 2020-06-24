@@ -1,0 +1,11 @@
+﻿<Properties>
+  <WatchEntry0 value="Date+30" />
+  <WatchEntry1 value="Date+30" />
+  <WatchEntry2 value="cdate(Date)" />
+  <WatchEntry3 value="Date" />
+  <WatchEntry4 value="Date" />
+  <WatchEntry5 value="mm(Date)" />
+  <WatchEntry6 value="Date(mm)" />
+  <WatchEntry7 value="Cdate(Date)" />
+  <WatchEntry8 value="month(now)" />
+</Properties>

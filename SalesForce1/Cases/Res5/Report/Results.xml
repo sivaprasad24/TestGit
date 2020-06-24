@@ -1,0 +1,406 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED qcserver CDATA #IMPLIED qcproject CDATA #IMPLIED SolManSolutionId CDATA #IMPLIED SolManProjectId CDATA #IMPLIED SolManTestPlanId CDATA #IMPLIED SolManTestPackageId CDATA #IMPLIED SolManUserInfoData CDATA #IMPLIED  >
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,AdditionalInfo*,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName,ConfName?,Res,DVer?,TSet?,TInst?,RunType?,DT?,AdditionalInfo*,Step*,DIter*,Step*,Action*,Doc*,Summary?,TestMaintenanceSummary*,NodeArgs?) >
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC|BPTWrapperTest|Flow|Group|Action) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT ConfName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT AdditionalInfo (AdditionalDataName,AdditionalDataValue ) >
+
+<!ELEMENT AdditionalDataName ( #PCDATA ) >
+
+<!ELEMENT AdditionalDataValue ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step*,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*, Summary,ActionMaintenanceSummary*, NodeArgs ) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,DataMapping?, Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED isCountable (False|True) "False" >
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT TestMaintenanceSummary (ActionMaintenanceSummary*) >
+<!ATTLIST TestMaintenanceSummary ObjectsAdded CDATA #REQUIRED ObjectsUpdated CDATA #REQUIRED StepsUpdated CDATA #REQUIRED StepsComments CDATA #REQUIRED><!ELEMENT ActionMaintenanceSummary (ObjectChange* ) >
+<!ATTLIST ActionMaintenanceSummary Action CDATA #REQUIRED Objects CDATA #REQUIRED Updated CDATA #REQUIRED LinesTotal CDATA #REQUIRED Added CDATA #REQUIRED LinesUpdated CDATA #REQUIRED>
+
+<!ELEMENT ObjectChange  (Hierarchy, PropertyChangeList* ) >
+<!ATTLIST ObjectChange Operation CDATA #IMPLIED OriginalRepository CDATA #IMPLIED>
+
+<!ELEMENT PropertyChangeList (PropertyDef*) >
+
+<!ELEMENT PropertyDef (OriginalValue, NewValue) >
+<!ATTLIST PropertyDef PropName CDATA #REQUIRED OriginRegularExpression (True|False) "False" NewRegularExpression (True|False) "False" AddedProperty (True|False) "False" >
+
+<!ELEMENT OriginalValue ( #PCDATA )>
+
+<!ELEMENT NewValue ( #PCDATA )>
+
+<!ELEMENT Hierarchy  (ObjectName, Hierarchy*) >
+<!ATTLIST Hierarchy MicClass CDATA #REQUIRED>
+
+<!ELEMENT ObjectName  ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,TimeTick* ,(Step|HtmlStep|Doc)*, DataMapping?, NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,TimeTick*,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT TimeTick ( #PCDATA ) >
+
+<!ELEMENT DataMapping ( DataMappedItem* )>
+<!ELEMENT DataMappedItem EMPTY >
+<!ATTLIST DataMappedItem dsName CDATA #REQUIRED >
+<!ATTLIST DataMappedItem rowId CDATA #REQUIRED >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?,ExtendedInfo? )>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED UserNote CDATA #IMPLIED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED MovieMarker CDATA "">
+<!ATTLIST NodeArgs Source CDATA #IMPLIED SourceLine CDATA #IMPLIED StepFlowItemKey CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT ExtendedInfo ( StepData ) >
+
+<!ATTLIST ExtendedInfo StepType CDATA #REQUIRED>
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+>
+<Report ver="2.0" tmZone="India Standard Time">
+<General productName="Micro Focus Unified Functional Testing" productVer="15.0.1" os="" host="DESKTOP-IAQTT8M"><DocLocation><![CDATA[C:\Users\PRASAD\Documents\Unified Functional Testing\SalesForce\Cases]]></DocLocation></General>
+<Doc rID="T1"   productName= "Micro Focus Unified Functional Testing"  >
+<DName><![CDATA[Cases]]></DName>
+<Res><![CDATA[Res5]]></Res>
+<DT rID="T2">
+<NodeArgs eType="Table" icon="2" nRep="4" filter="False" >
+<Disp><![CDATA[Run-Time Data Table]]></Disp>
+<BtmPane vType="Table" >
+<Path><![CDATA[Default.xlsx]]></Path>
+</BtmPane>
+</NodeArgs>
+</DT>
+<DIter rID="T3" iterID="1" >
+<Action rID="T4">
+<AName><![CDATA[Cases]]></AName>
+<Step rID="T5">
+<Obj plainTxt="False" ><![CDATA[Home | Salesforce]]></Obj>
+<Details plainTxt="False" ><![CDATA[<table><tr><td><span style="text-align : left; font-size : 12px; ">Local Browser</span></td></tr></table>]]></Details>
+<Time><![CDATA[6/9/2020 - 9:58:37]]></Time>
+<TimeTick>1591676917</TimeTick>
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[abc | Salesforce]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/9/2020 - 9:58:37]]></Time>
+<TimeTick>1591676917</TimeTick>
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[Cases.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[6/9/2020 - 9:58:37]]></Time>
+<TimeTick>1591676917</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="11" Source="Cases" SourceLine="17" >
+<Disp><![CDATA[Cases.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T8">
+<Obj plainTxt="False" ><![CDATA[Cases.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/9/2020 - 9:58:37]]></Time>
+<TimeTick>1591676917</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="14" Source="Cases" SourceLine="19" >
+<Disp><![CDATA[Cases.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="6" nRep="10" Source="Cases" SourceLine="17" >
+<Disp><![CDATA[abc | Salesforce]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="9" Source="Cases" SourceLine="17" >
+<Disp><![CDATA[Home | Salesforce]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T9">
+<Obj ><![CDATA[Cases  ]]></Obj>
+<Details ><![CDATA[Click on Cases link]]></Details>
+<Time><![CDATA[6/9/2020 - 9:58:52]]></Time>
+<TimeTick>1591676932</TimeTick>
+<NodeArgs eType="User" icon="8" nRep="15" status="Passed" Source="Cases" SourceLine="21" >
+<Disp><![CDATA[Cases  ]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T10">
+<Obj plainTxt="False" ><![CDATA[Home | Salesforce]]></Obj>
+<Details plainTxt="False" ><![CDATA[<table><tr><td><span style="text-align : left; font-size : 12px; ">Local Browser</span></td></tr></table>]]></Details>
+<Time><![CDATA[6/9/2020 - 9:59:18]]></Time>
+<TimeTick>1591676958</TimeTick>
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[Cases | Salesforce]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/9/2020 - 9:59:18]]></Time>
+<TimeTick>1591676958</TimeTick>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[New.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[6/9/2020 - 9:59:18]]></Time>
+<TimeTick>1591676958</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="19" Source="Cases" SourceLine="29" >
+<Disp><![CDATA[New.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T13">
+<Obj plainTxt="False" ><![CDATA[New.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/9/2020 - 9:59:18]]></Time>
+<TimeTick>1591676958</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="22" Source="Cases" SourceLine="31" >
+<Disp><![CDATA[New.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="6" nRep="18" Source="Cases" SourceLine="29" >
+<Disp><![CDATA[Cases | Salesforce]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="17" Source="Cases" SourceLine="29" >
+<Disp><![CDATA[Home | Salesforce]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T14">
+<Obj ><![CDATA[Cases Creation ]]></Obj>
+<Details ><![CDATA[Click on New Cases link]]></Details>
+<Time><![CDATA[6/9/2020 - 9:59:18]]></Time>
+<TimeTick>1591676958</TimeTick>
+<NodeArgs eType="User" icon="8" nRep="23" status="Passed" Source="Cases" SourceLine="33" >
+<Disp><![CDATA[Cases Creation ]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T15">
+<Obj plainTxt="False" ><![CDATA[Home | Salesforce]]></Obj>
+<Details plainTxt="False" ><![CDATA[<table><tr><td><span style="text-align : left; font-size : 12px; ">Local Browser</span></td></tr></table>]]></Details>
+<Time><![CDATA[6/9/2020 - 9:59:28]]></Time>
+<TimeTick>1591676968</TimeTick>
+<Step rID="T16">
+<Obj plainTxt="False" ><![CDATA[New Contact | Salesforce]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/9/2020 - 9:59:28]]></Time>
+<TimeTick>1591676968</TimeTick>
+<Step rID="T17">
+<Obj plainTxt="False" ><![CDATA[New Contact.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[6/9/2020 - 9:59:28]]></Time>
+<TimeTick>1591676968</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="68" Source="Cases" SourceLine="40" >
+<Disp><![CDATA[New Contact.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="6" nRep="67" Source="Cases" SourceLine="40" >
+<Disp><![CDATA[New Contact | Salesforce]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="66" Source="Cases" SourceLine="40" >
+<Disp><![CDATA[Home | Salesforce]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T18">
+<Obj ><![CDATA[NewContact Creation ]]></Obj>
+<Details ><![CDATA[Salution field is not displayed]]></Details>
+<Time><![CDATA[6/9/2020 - 9:59:28]]></Time>
+<TimeTick>1591676968</TimeTick>
+<NodeArgs eType="User" icon="8" nRep="69" status="Failed" Source="Cases" SourceLine="46" >
+<Disp><![CDATA[NewContact Creation ]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T19">
+<Obj plainTxt="False" ><![CDATA[Home | Salesforce]]></Obj>
+<Details plainTxt="False" ><![CDATA[<table><tr><td><span style="text-align : left; font-size : 12px; ">Local Browser</span></td></tr></table>]]></Details>
+<Time><![CDATA[6/9/2020 - 9:59:50]]></Time>
+<TimeTick>1591676990</TimeTick>
+<Step rID="T20">
+<Obj plainTxt="False" ><![CDATA[New Case | Salesforce]]></Obj>
+<Details plainTxt="False" ><![CDATA[Page]]></Details>
+<Time><![CDATA[6/9/2020 - 9:59:50]]></Time>
+<TimeTick>1591676990</TimeTick>
+<Step rID="T21">
+<Obj plainTxt="False" ><![CDATA["FirstContact"- Description mismatch]]></Obj>
+<Details plainTxt="False" ><![CDATA[The object was not found using the test object description. Check the object's properties.]]></Details>
+<Time><![CDATA[6/9/2020 - 9:59:50]]></Time>
+<TimeTick>1591676990</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="110" status="Warning" Source="Cases" SourceLine="51" >
+<Disp><![CDATA["FirstContact"- Description mismatch]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T22">
+<Obj plainTxt="False" ><![CDATA["FirstContact"- Smart Identification]]></Obj>
+<Details plainTxt="False" ><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not found.</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>xpath=//DIV/DIV[@role="listitem"]/DIV/DIV/DIV/DIV/DIV/DIV/DIV/DIV[@role="listbox"]/DIV/UL[@role="presentation"]/LI[@role="presentation"]/A[@role="option"]/DIV[normalize-space()=.*]/DIV[1]<br>micclass=WebElement<br>html tag=DIV<br>class=primaryLabel slds-truncate slds-lookup__result-text<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (1415 objects found)&nbsp;</FONT></u><br>
+micclass=WebElement<br>html tag=DIV<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+html id=<SPAN class=passed> (Used</SPAN>, 1372 matches)</SPAN><br>class=primaryLabel slds-truncate slds-lookup__result-text<SPAN class=passed> (Used</SPAN>, 2 matches)</SPAN><br>innertext=john dane<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>visible=-1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>acc_name=<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></Details>
+<Time><![CDATA[6/9/2020 - 9:59:50]]></Time>
+<TimeTick>1591676990</TimeTick>
+<NodeArgs eType="Replay" icon="10" nRep="111" Source="Cases" SourceLine="51" >
+<Disp><![CDATA["FirstContact"- Smart Identification]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T23">
+<Obj plainTxt="False" ><![CDATA[FirstContact.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/9/2020 - 9:59:50]]></Time>
+<TimeTick>1591676990</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="112" Source="Cases" SourceLine="51" >
+<Disp><![CDATA[FirstContact.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T24">
+<Obj plainTxt="False" ><![CDATA[--None--.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/9/2020 - 9:59:55]]></Time>
+<TimeTick>1591676995</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="115" Source="Cases" SourceLine="54" >
+<Disp><![CDATA[--None--.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T25">
+<Obj plainTxt="False" ><![CDATA[[ Phone ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[6/9/2020 - 10:00:05]]></Time>
+<TimeTick>1591677005</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="118" Source="Cases" SourceLine="59" >
+<Disp><![CDATA[[ Phone ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T26">
+<Obj plainTxt="False" ><![CDATA[Subject.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["SubjectTest"]]></Details>
+<Time><![CDATA[6/9/2020 - 10:00:06]]></Time>
+<TimeTick>1591677006</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="121" Source="Cases" SourceLine="61" >
+<Disp><![CDATA[Subject.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T27">
+<Obj plainTxt="False" ><![CDATA[Description.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["DescriptionTest"]]></Details>
+<Time><![CDATA[6/9/2020 - 10:00:06]]></Time>
+<TimeTick>1591677006</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="124" Source="Cases" SourceLine="63" >
+<Disp><![CDATA[Description.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T28">
+<Obj plainTxt="False" ><![CDATA[Internal_Commnets.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["CommentsTest"]]></Details>
+<Time><![CDATA[6/9/2020 - 10:00:06]]></Time>
+<TimeTick>1591677006</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="127" Source="Cases" SourceLine="65" >
+<Disp><![CDATA[Internal_Commnets.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T29">
+<Obj plainTxt="False" ><![CDATA[WebMail.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["Test.TEst1@yopmail.com"]]></Details>
+<Time><![CDATA[6/9/2020 - 10:00:06]]></Time>
+<TimeTick>1591677006</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="130" Source="Cases" SourceLine="67" >
+<Disp><![CDATA[WebMail.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T30">
+<Obj plainTxt="False" ><![CDATA[WebCompany.Set]]></Obj>
+<Details plainTxt="False" ><![CDATA["TestCompany"]]></Details>
+<Time><![CDATA[6/9/2020 - 10:00:06]]></Time>
+<TimeTick>1591677006</TimeTick>
+<NodeArgs eType="Replay" icon="12" nRep="133" Source="Cases" SourceLine="70" >
+<Disp><![CDATA[WebCompany.Set]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T31">
+<Obj plainTxt="False" ><![CDATA[Stop Run]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run stopped by user.]]></Details>
+<Time><![CDATA[6/9/2020 - 10:00:31]]></Time>
+<TimeTick>1591677031</TimeTick>
+<NodeArgs eType="General" icon="13" nRep="134" status="Information" >
+<Disp><![CDATA[Stop Run]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="6" nRep="109" status="Warning" Source="Cases" SourceLine="51" >
+<Disp><![CDATA[New Case | Salesforce]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="108" status="Warning" Source="Cases" SourceLine="51" >
+<Disp><![CDATA[Home | Salesforce]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="6/9/2020 - 9:58:37" eTime="6/9/2020 - 10:00:31" passed="2" failed="1" warnings="1" ></Summary>
+<NodeArgs eType="StartAction" icon="4" nRep="7" status="Failed" >
+<Disp><![CDATA[Cases Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="6" status="Failed" >
+<Disp><![CDATA[Cases Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<Summary sTime="6/9/2020 - 9:58:34" eTime="6/9/2020 - 10:00:32" passed="2" failed="1" warnings="1" stopped="True" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="3" status="Failed" >
+<Disp><![CDATA[Test Cases Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>
